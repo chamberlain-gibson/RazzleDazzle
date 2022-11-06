@@ -108,7 +108,10 @@ const AddCustomers = () => {
         <div style={{display: 'grid',
             gridTemplateColumns: '1fr 1fr 1fr',
             alignContent: 'center',
-            textAlign: 'center', 
+            textAlign: 'center',
+            fontWeight: 'bold',
+            marginLeft: '40px',
+            marginRight: '40px', 
         
         }}>
             <div>Trainer</div>
@@ -122,6 +125,9 @@ const AddCustomers = () => {
             gridTemplateColumns: '1fr 1fr 1fr',
             alignContent: 'center',
             textAlign: 'center', 
+            fontWeight: 'bold',
+            marginLeft: '40px',
+            marginRight: '40px', 
             
         }}>
             <div>Customer Name</div>
@@ -137,23 +143,28 @@ const AddCustomers = () => {
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr 1fr',
                     alignContent: 'center',
-                    textAlign: 'center', 
+                    textAlign: 'center',
+                    marginLeft: '40px',
+                    marginRight: '40px',
                 }}>
-                    <span style={{ backgroundColor: '#FFFF00' }}>{`${data.FirstName} ${data.LastName}`}</span>
-                    <span style={{ backgroundColor: '#FFFF00' }}>{data.Style}</span>
-                    <span style={{ backgroundColor: '#FFFF00' }}>{data.AssignedCustomerIds.length}</span>
+                    <span style={{ backgroundColor: '#727070' }}>{`${data.FirstName} ${data.LastName}`}</span>
+                    <span style={{ backgroundColor: '#727070' }}>{data.Style}</span>
+                    <span style={{ backgroundColor: '#727070' }}>{data.AssignedCustomerIds.length}</span>
             
                 </div> :
                 <div style={{
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr 1fr',
                     alignContent: 'center',
-                    textAlign: 'center', 
+                    textAlign: 'center',
+                    borderBottom: '1px solid black', 
+                    marginLeft: '40px',
+                    marginRight: '40px',
                 }}
                     onClick={() => handleSetSelectedTrainer({ data })}>
-                    <span >{`${data.FirstName} ${data.LastName}`}</span>
-                    <span >{data.Style}</span>
-                    <span >{data.AssignedCustomerIds.length}</span>
+                    <span style={{ backgroundColor: '#D9D9D9' }}>{`${data.FirstName} ${data.LastName}`}</span>
+                    <span style={{ backgroundColor: '#D9D9D9' }}>{data.Style}</span>
+                    <span style={{ backgroundColor: '#D9D9D9' }}>{data.AssignedCustomerIds.length}</span>
                 </div>
         ))
     
@@ -181,23 +192,28 @@ const AddCustomers = () => {
                         display: 'grid',
                         gridTemplateColumns: '1fr 1fr 1fr',
                         alignContent: 'center',
-                        textAlign: 'center', 
+                        textAlign: 'center',
+                        marginLeft: '40px',
+                        marginRight: '40px',
                     }}>
-                        <span style={{ backgroundColor: '#FFFF00' }}>{`${data.FirstName} ${data.LastName}`}</span>
-                        <span style={{ backgroundColor: '#FFFF00' }}>{data.Style}</span>
-                        <span style={{ backgroundColor: '#FFFF00' }}>{data.Experience}</span>
+                        <span style={{ backgroundColor: '#727070' }}>{`${data.FirstName} ${data.LastName}`}</span>
+                        <span style={{ backgroundColor: '#727070' }}>{data.Style}</span>
+                        <span style={{ backgroundColor: '#727070' }}>{data.Experience}</span>
                 
                     </div> :
                     <div style={{
                         display: 'grid',
                         gridTemplateColumns: '1fr 1fr 1fr',
                         alignContent: 'center',
-                        textAlign: 'center', 
+                        textAlign: 'center',
+                        borderBottom: '1px solid black', 
+                        marginLeft: '40px',
+                        marginRight: '40px',
                     }}
                         onClick={() => handleSetAddCustomer({ data })}>
-                        <span >{`${data.FirstName} ${data.LastName}`}</span>
-                        <span >{data.Style}</span>
-                        <span >{data.Experience}</span>
+                        <span style={{ backgroundColor: '#D9D9D9' }}>{`${data.FirstName} ${data.LastName}`}</span>
+                        <span style={{ backgroundColor: '#D9D9D9' }}>{data.Style}</span>
+                        <span style={{ backgroundColor: '#D9D9D9' }}>{data.Experience}</span>
                     </div>)
                 : null
         ))

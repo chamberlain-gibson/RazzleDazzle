@@ -1,3 +1,10 @@
-.App {
-  background-color: #D9D9D9;
+.watermarkBack {
+  position: fixed;
+  top: 85px;
+  background:url("./Components/User Pages/Assets/FINALWATERMARK.jpg");
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  z-index: -1;
+  
 }

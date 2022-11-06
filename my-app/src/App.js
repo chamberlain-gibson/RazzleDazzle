@@ -22,6 +22,7 @@ import AddEditNews from './Components/User Pages/SettingsPages/AddEditNews';
 import ManageTrainers from './Components/User Pages/ManageTrainers';
 import ManageCustomers from './Components/User Pages/ManageCustomers/ManageCustomers';
 import TrainerWorkload from './Components/User Pages/Trainer Workload/TrainerWorkload';
+import HorseWatermark from './Components/User Pages/Assets/FINALWATERMARK.jpg';
 import Help from './Components/Help/Help.jsx';
 function App() {
   const [wpage, setwpage] = useState('About Us')
@@ -71,9 +72,9 @@ function App() {
    * We need backend to validate when the user signs in who they are
    */
   const [userPermissions, setUserPermissions] = useState({
-    isAdmin: false,
+    isAdmin: true,
     isTrainer: false,
-    isCustomer: true,
+    isCustomer: false,
   })
   
   const ChosenWebpage = () => {
@@ -128,18 +129,23 @@ function App() {
   /**
    * Sets background to be a certain color
    */
-  document.body.style = 'background: #DFDFDF;';
+  document.body.style = 'background: #D0D0D0;';
+  
+  // document.body.style = 'backgroundImage: `url(${HorseWatermark})`';
+  // 'backgroundImage: url("./Components/User Pages/Assets/FINALWATERMARK.jpg")';
+  // backgroundImage:"url(/UpmostlyLogo.png)"
   // Or with CSS
   // document.body.classList.add('background-red');
   const webpage = (
     <div>
+      <img src={HorseWatermark} className='watermarkBack' alt="Horse Watermark" />
       <Banner setwpage={setwpage} wpage={wpage} signedIn={signedIn} userPermissions={userPermissions} setSignedIn={setSignedIn} />
       <Help wpage={wpage} userPermissions={userPermissions} />
       <ChosenWebpage  />
     </div>
   );
   return (
-    webpage
+  webpage
   );
 }
 

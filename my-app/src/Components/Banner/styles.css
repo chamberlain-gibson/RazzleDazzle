@@ -8,6 +8,15 @@
     justify-content: center;
   }
 
+  .logoPic {
+    position: absolute;
+    align-items: left;
+    /* top: 10px; */
+    left: 0px;
+    height: 99px;
+    width: auto;
+  }
+
   .activetab {
     font-weight: bolder !important;
   }
@@ -135,7 +144,7 @@
     padding-top: 15px;
     padding-bottom: 15px;
     box-shadow: 0px 25px 25px #0C1526;
-    z-index: 3;
+    z-index: 4;
   }
 
   .dropEntry {

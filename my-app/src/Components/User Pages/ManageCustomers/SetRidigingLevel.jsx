@@ -77,23 +77,28 @@ const AccessTrainer = () => {
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr 1fr', 
                     alignContent: 'center',
-                    textAlign: 'center',                 
+                    textAlign: 'center',
+                    marginLeft: '40px',
+                    marginRight: '40px',                
                 }}>
-                    <span style={{ backgroundColor: '#FFFF00' }}>{`${data.FirstName} ${data.LastName}` }</span>
-                    <span style={{ backgroundColor: '#FFFF00' }}>{data.Style}</span>
-                    <span style={{ backgroundColor: '#FFFF00' }}>{data.Level}</span>
+                    <span style={{ backgroundColor: '#727070' }}>{`${data.FirstName} ${data.LastName}` }</span>
+                    <span style={{ backgroundColor: '#727070' }}>{data.Style}</span>
+                    <span style={{ backgroundColor: '#727070' }}>{data.Level}</span>
                 </div>
                 :
                 <div style={{
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr 1fr',
                     alignContent: 'center',
-                    textAlign: 'center',  
+                    textAlign: 'center',
+                    borderBottom: '1px solid black', 
+                    marginLeft: '40px',
+                    marginRight: '40px',
                 }}
                     onClick={() => handleSetPrefferedTrainer({ data })}>
-                    <span >{`${data.FirstName} ${data.LastName}` }</span>
-                    <span >{data.Style}</span>
-                    <span >{data.Level}</span>
+                    <span style={{ backgroundColor: '#D9D9D9' }}>{`${data.FirstName} ${data.LastName}` }</span>
+                    <span style={{ backgroundColor: '#D9D9D9' }}>{data.Style}</span>
+                    <span style={{ backgroundColor: '#D9D9D9' }}>{data.Level}</span>
                 
                 </div>
 
@@ -103,7 +108,10 @@ const AccessTrainer = () => {
         <div style={{display: 'grid',
             gridTemplateColumns: '1fr 1fr 1fr',
             alignContent: 'center',
-            textAlign: 'center',  
+            textAlign: 'center',
+            fontWeight: 'bold',
+            marginLeft: '40px',
+            marginRight: '40px', 
             
         }}>
             <div>Trainer</div>
@@ -117,12 +125,12 @@ const AccessTrainer = () => {
             {PreferredTrainerFormHeading && trainersList}
             <br />
             <form>
-                <label className='label2'>Beginner: </label>
-                <input type="radio" name="experienceLevel" onClick={() => SetRidigingLevel('Beginner')}/>
-                <label className='label2'>Intermediate: </label>
-                <input type="radio" name="experienceLevel" onClick={() => SetRidigingLevel('Intermediate')}/>
-                <label className='label2'>Advanced: </label>
-                <input type="radio" name="experienceLevel" onClick={() => SetRidigingLevel('Advanced')}/>
+                    <label className='label2Alt1'>Beginner: </label>
+                    <input type="radio" name="experienceLevel" onClick={() => SetRidigingLevel('Beginner')}/>
+                    <label className='label2Alt2'>Intermediate: </label>
+                    <input type="radio" name="experienceLevel" onClick={() => SetRidigingLevel('Intermediate')}/>
+                    <label className='label2Alt3'>Advanced: </label>
+                    <input type="radio" name="experienceLevel" onClick={() => SetRidigingLevel('Advanced')}/>
             </form>
             <div className='buttonContainer'>
                 <br /><br />

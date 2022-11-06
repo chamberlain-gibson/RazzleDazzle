@@ -152,11 +152,11 @@ const Calendar = ({userPermissions}) => {
     const tabs = (
         <div className='subTitle1'>
         <div
-          className={`subLeft2 ${selectedTab === 'Available Appointments' ? 'activeSubtitle' : ''}`}
+          className={`subLeft3 ${selectedTab === 'Available Appointments' ? 'activeSubtitle' : ''}`}
           onClick={() => setSelectedTab('Available Appointments')}>Available Appointments</div>
         <div
-          className={`subRight2 ${selectedTab === 'My Calendar View' ? 'activeSubtitle' : ''}`}
-          onClick={() => setSelectedTab('My Calendar View')}>My Calendar View</div>
+          className={`subRight3 ${selectedTab === 'My Calendar View' ? 'activeSubtitle' : ''}`}
+          onClick={() => setSelectedTab('My Calendar View')}>My Calendar</div>
             <hr className="titleunderline2"></hr>
         </div>
     );

@@ -1,0 +1,53 @@
+.helpIcon {
+	position:fixed;
+	width:60px;
+	height:60px;
+	top: 110px;
+	left: 10px;
+	background-color:#578aba;
+	color:#FFF;
+	border-radius:50px;
+	border: 1px solid #0C1526;
+	text-align:center;
+	box-shadow: 2px 2px 3px #0C1526;
+	font-size: 28px;
+	z-index: 4;
+}
+
+.floatingIcon {
+    position:fixed;
+	width:30px;
+	height:30px;
+	top: 122px;
+	left: 26px;
+	background-color:#578aba;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	text-shadow: #0C1526;
+	/* box-shadow: 2px 2px 3px #0C1526; */
+	font-size: 28px;
+	z-index: 4;
+}
+
+.floatingIcon:hover + .hide{
+	display: block;
+	position: fixed;
+	top: 130px;
+	left: 75px;
+	/* color:white; */
+	color: white;
+	background-color: #578aba;
+	padding: 3px;
+	border: 1px solid #0C1526;
+	border-radius: 3px;
+	font-size: 16px;
+	text-align:center;
+	width: 60px;
+	box-shadow: 2px 2px 3px #0C1526;
+	z-index: 4;
+}
+
+.hide {
+	display: none;
+}

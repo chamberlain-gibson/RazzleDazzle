@@ -21,11 +21,11 @@ const ManageAppointment = () => {
     const tabs = (
         <div className='subTitle1'>
             <div
-                className={`subLeft2 ${selectedTab === 'Add Customers' ? 'activeSubtitle' : ''}`}
+                className={`subLeft3 ${selectedTab === 'Add Customers' ? 'activeSubtitle' : ''}`}
                 // className='subLeft2'
                 onClick={() => setSelectedTab('Add Customers')}>Add Customers</div>
             <div
-                className={`subRight2 ${selectedTab === 'Remove Customers' ? 'activeSubtitle' : ''}`}
+                className={`subRight3 ${selectedTab === 'Remove Customers' ? 'activeSubtitle' : ''}`}
                 // className='subRight2'
                 onClick={() => setSelectedTab('Remove Customers')}>Remove Customers</div>
             <hr className="titleunderline2"></hr>

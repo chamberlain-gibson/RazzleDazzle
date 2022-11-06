@@ -1,6 +1,6 @@
 .react-calendar {
   margin-left: calc(50% - 350px);
-  /* margin-top: 300px; */
+  margin-top: 150px;
   width: 700px;
   max-width: 100%;
   background: white;
@@ -67,9 +67,9 @@
   font-size: 0.75em;
   font-weight: bold;
 }
-.react-calendar__month-view__days__day--weekend {
-  color: #d10000;
-}
+/* .react-calendar__month-view__days__day--weekend {
+  color: black;
+} */
 .react-calendar__month-view__days__day--neighboringMonth {
   color: #757575;
 }
@@ -93,42 +93,48 @@
   background-color: #e6e6e6;
 }
 .react-calendar__tile--now {
-  background: #ffff76;
+  background: #0C1526;
+  color: white;
 }
 .react-calendar__tile--now:enabled:hover,
 .react-calendar__tile--now:enabled:focus {
-  background: #ffffa9;
+  background: #0C1526;
+  color: white;
 }
 .react-calendar__tile--hasActive {
-  background: #76baff;
+  background: #0C1526;
+  color: white;
 }
 .react-calendar__tile--hasActive:enabled:hover,
 .react-calendar__tile--hasActive:enabled:focus {
-  background: #a9d4ff;
+  background: #0C1526;
+  color: white;
 }
 .react-calendar__tile--active {
-  background: #006edc;
+  background: #6190BC;
   color: white;
 }
 .react-calendar__tile--active:enabled:hover,
 .react-calendar__tile--active:enabled:focus {
-  background: #1087ff;
+  background: #6190BC;
 }
 .react-calendar--selectRange .react-calendar__tile--hover {
   background-color: #e6e6e6;
 }
 
 .trainerPill {
-  background-color: #6190BC;
+  background-color: #0C1526;
+  color: white;
   margin: 5px;
   border-radius: 16px;
   padding: 5px;
   text-align: center;
-  box-shadow: 0px 25px 25px #0c1526;
+  box-shadow: 0px 25px 25px #0C1526;
 }
 
 .appointmentPill {
-  background-color: #61b3bc;
+  background-color: #6190BC;
+  color: #0C1526;
   margin: 5px;
   border-radius: 16px;
   padding: 10px;

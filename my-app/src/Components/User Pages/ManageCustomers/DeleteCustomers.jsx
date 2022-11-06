@@ -66,11 +66,13 @@ const DeleteCustomer = () => {
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr 1fr',
                     alignContent: 'center',
-                    textAlign: 'center',                    
+                    textAlign: 'center', 
+                    marginLeft: '40px',
+                    marginRight: '40px',                   
                 }}>
-                    <span style={{ backgroundColor: '#FFFF00' }}>{data.Customer}</span>
-                    <span style={{ backgroundColor: '#FFFF00' }}>{data.Style}</span>
-                    <span style={{ backgroundColor: '#FFFF00' }}>{data.Level}</span>
+                    <span style={{ backgroundColor: '#727070' }}>{data.Customer}</span>
+                    <span style={{ backgroundColor: '#727070' }}>{data.Style}</span>
+                    <span style={{ backgroundColor: '#727070' }}>{data.Level}</span>
                 
                 </div> :
                 <div style={{
@@ -78,11 +80,14 @@ const DeleteCustomer = () => {
                     gridTemplateColumns: '1fr 1fr 1fr',
                     alignContent: 'center',
                     textAlign: 'center', 
+                    borderBottom: '1px solid black', 
+                    marginLeft: '40px',
+                    marginRight: '40px',
                 }}
                     onClick={() => handleSetDeleteCustomer({ data })}>
-                    <span >{data.Customer}</span>
-                    <span >{data.Style}</span>
-                    <span >{data.Level}</span>
+                    <span style={{ backgroundColor: '#D9D9D9' }}>{data.Customer}</span>
+                    <span style={{ backgroundColor: '#D9D9D9' }}>{data.Style}</span>
+                    <span style={{ backgroundColor: '#D9D9D9' }}>{data.Level}</span>
                 
                 </div>
 
@@ -92,7 +97,10 @@ const DeleteCustomer = () => {
         <div style={{display: 'grid',
             gridTemplateColumns: '1fr 1fr 1fr',
             alignContent: 'center',
-            textAlign: 'center', 
+            textAlign: 'center',
+            fontWeight: 'bold',
+            marginLeft: '40px',
+            marginRight: '40px', 
         }}>
             <div>Customer</div>
             <div>Style</div>

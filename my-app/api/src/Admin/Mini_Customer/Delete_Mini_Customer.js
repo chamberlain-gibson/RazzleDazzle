@@ -17,7 +17,7 @@ var con = mysql.createConnection({
  */
 const { setReserved } = require("../../Customer/Appointments/Set_Customer_Appointment");
 
-deleteCustomer = (customer_id) => {
+deleteUser = (customer_id) => {
     con.query("UPDATE Login SET Decomission = 1 WHERE CID = " +
         customer_id + ";",
         function(err) {

@@ -1,8 +1,7 @@
 import React from 'react';
+import './styles.css'
 
 const Help = ({ wpage, userPermissions }) => {
-    // const baseOfAnotherHost = 'https://google.com'
-    // // can also work with relative urls like 'doc/sign/' or '/doc/sign'
     let relativeOrAbsoluteURL = 'https://www.google.com'
     
     /**
@@ -21,8 +20,9 @@ const Help = ({ wpage, userPermissions }) => {
 
     // To-do: Add help Icon later
     return (
-        <a href={absoulteUrl} target={'_blank'} rel="noopener noreferrer external">
-            Help
+        <a className="helpIcon" href={absoulteUrl} target={'_blank'} rel="noopener noreferrer external">
+            <div className="floatingIcon">?</div>
+            <div className='hide'>Help</div>
         </a>
     );
 }

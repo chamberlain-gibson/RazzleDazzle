@@ -1,3 +1,7 @@
+const express = require('express');
+const app = express();
+app.listen('3001');
+
 /**
  * Mysql connection
  */
@@ -12,33 +16,26 @@ var con = mysql.createConnection({
     connectTimeout: 30000
 });
 
-con.connect(function(err) {
-    if (err) throw err;
-})
-
-/**
- * Imports
- */
-const { setReserved } = require("./Set_Customer_Appointment");
-
 /** 
  * Setters for Customer class
  */
-setName = (name, customer_id) => {
-    con.query("UPDATE Customer SET Cust_Name = '" + name +
-        "' WHERE CID = " + customer_id + ";",
+app.put('/setCustomerName', (req, res) => {
+    con.query("UPDATE Customer SET Cust_Name = '" + req.body.name +
+        "' WHERE CID = " + req.body.customer_id + ";",
         function(err) {
             if (err) throw err;
         });
-}
+})
 
-setAddress = (addr, customer_id) => {
-    con.query("UPDATE Customer SET Cust_Address = '" + addr +
-        "' WHERE CID = " + customer_id + ";",
+app.put('/setCustomerAddress', (req, res) => {
+    con.query("UPDATE Customer SET Cust_Address = '" + req.body.addr +
+        "' WHERE CID = " + req.body.customer_id + ";",
         function(err) {
             if (err) throw err;
         });
-}
+})
+
+app.put('')
 
 setPhone = (phone_num, customer_id) => {
     con.query("UPDATE Customer SET Cust_Phone_Number = '" + phone_num +

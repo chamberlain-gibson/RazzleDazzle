@@ -21,7 +21,7 @@ con.connect(function(err) {
  */
 const { setReserved } = require("./Set_Customer_Appointment");
 
-deleteCustomer = (customer_id, calendar) => {
+deleteUser = (customer_id, calendar) => {
     con.query("UPDATE Login SET Decomission = 1 WHERE CID = " +
         customer_id + ";",
         function(err) {
